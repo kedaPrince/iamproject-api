@@ -1,0 +1,9 @@
+install breeze for login and registration use two commands
+$ composer require laravel/breeze --dev
+$ php artisan breeze:install blade
+
+then just register
+
+intergrate admin dashboard and front end on view
+
+start creating table fields
