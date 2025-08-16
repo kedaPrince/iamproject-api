@@ -2,7 +2,7 @@
     <div class="sb-sidenav-menu">
         <div class="nav">
             <div class="sb-sidenav-menu-heading">Core</div>
-            <a class="nav-link" href="index.html">
+            <a class="nav-link" href="{{url('/admin/dashboard')}}">
                 <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
                 Dashboard
             </a>
@@ -15,8 +15,8 @@
             </a>
             <div class="collapse" id="collapeCategory" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
                 <nav class="sb-sidenav-menu-nested nav">
-                    <a class="nav-link" href="{{ url('/categories-create') }}">Create Category</a>
-                    <a class="nav-link" href="{{ url('/view-categories') }}">View Category</a>
+                    <a class="nav-link" href="{{ url('/admin/categories/create') }}">Create Category</a>
+                    <a class="nav-link" href="{{ url('/admin/view-categories') }}">View Category</a>
                 </nav>
             </div>
 
@@ -30,8 +30,8 @@
             <div class="collapse" id="collapseProductsRecommended" aria-labelledby="headingOne"
                 data-bs-parent="#sidenavAccordion">
                 <nav class="sb-sidenav-menu-nested nav">
-                    <a class="nav-link" href="{{ url('/products-create') }}">Create Recommended Products</a>
-                    <a class="nav-link" href="{{ url('/view-products') }}">View Recommended Product</a>
+                    <a class="nav-link" href="{{ url('/admin/products-create') }}">Create Recommended Products</a>
+                    <a class="nav-link" href="{{ url('/admin/view-products') }}">View Recommended Product</a>
                 </nav>
             </div>
 
@@ -45,37 +45,23 @@
             <div class="collapse" id="collapseProductsSingle" aria-labelledby="headingOne"
                 data-bs-parent="#sidenavAccordion">
                 <nav class="sb-sidenav-menu-nested nav">
-                    <a class="nav-link" href="{{ url('/single-product-create') }}">Create Single Item Product</a>
-                    <a class="nav-link" href="{{ url('/view-single-product') }}">View Single Item Product</a>
+                    <a class="nav-link" href="{{ url('/admin/single-product-create') }}">Create Single Item Product</a>
+                    <a class="nav-link" href="{{ url('/admin/view-single-product') }}">View Single Item Product</a>
                 </nav>
             </div>
 
             <div class="sb-sidenav-menu-heading">Track Orders</div>
-            <a class="nav-link" href="{{url('/deliveries')}}">
+            <a class="nav-link" href="{{url('/admin/deliveries')}}">
                 <div class="sb-nav-link-icon"><i class="fas fa-chart-area"></i></div>
                 Delivered
             </a>
-            <a class="nav-link" href="{{url('/orders')}}">
+            <a class="nav-link" href="{{url('/admin/orders')}}">
                 <div class="sb-nav-link-icon"><i class="fas fa-table"></i></div>
                 Orders
             </a>
 
-
-</nav>
-</div>
-<div class="sb-sidenav-menu-heading">Addons</div>
-<a class="nav-link" href="charts.html">
-    <div class="sb-nav-link-icon"><i class="fas fa-chart-area"></i></div>
-    Charts
-</a>
-<a class="nav-link" href="tables.html">
-    <div class="sb-nav-link-icon"><i class="fas fa-table"></i></div>
-    Tables
-</a>
-</div>
-</div>
-<div class="sb-sidenav-footer">
-    <div class="small">Logged in as:</div>
-    Start Bootstrap
-</div>
+            <div class="sb-sidenav-footer">
+                <div class="small">Logged in as:</div>
+                Start Bootstrap
+            </div>
 </nav>

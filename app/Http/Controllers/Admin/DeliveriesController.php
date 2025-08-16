@@ -7,5 +7,13 @@ use Illuminate\Http\Request;
 
 class DeliveriesController extends Controller
 {
-    //
+     public function index(){
+
+        return view('admin.deliveries.index');
+    }
+
+     public function create(){
+
+        return view('admin.deliveries.create');
+    }
 }
