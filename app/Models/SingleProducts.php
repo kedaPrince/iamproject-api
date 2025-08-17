@@ -9,15 +9,18 @@ class SingleProducts extends Model
 {
     use HasFactory;
 
-    protected $table = 'single_product';
+    protected $table = 'single_products';
 
     protected $fillable = [
+        'uuid',
         'category_id',
         'name',
+        'slug',
         'description',
         'price',
         'stock',
         'image',
+        'is_active',
     ];
 
     public function category()

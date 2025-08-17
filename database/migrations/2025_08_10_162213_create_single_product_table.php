@@ -13,13 +13,8 @@ return new class extends Migration
     {
        Schema::create('single_products', function (Blueprint $table) {
     $table->id();
-
-    // Link to category
-    $table->foreignId('category_id')
-          ->constrained('categories')
-          ->onDelete('cascade');
-
-    // Example product columns
+    $table->foreignId('category_id') ->constrained('categories')->onDelete('cascade');
+    $table->uuid('uuid')->unique();
     $table->string('name');
     $table->string('slug')->unique();
     $table->text('description')->nullable();
@@ -37,6 +32,7 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('single_product');
+       Schema::dropIfExists('single_products'); // plural
+
     }
 };

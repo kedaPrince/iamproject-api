@@ -16,7 +16,7 @@
             <div class="collapse" id="collapeCategory" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
                 <nav class="sb-sidenav-menu-nested nav">
                     <a class="nav-link" href="{{ url('/admin/categories/create') }}">Create Category</a>
-                    <a class="nav-link" href="{{ url('/admin/view-categories') }}">View Category</a>
+                    <a class="nav-link" href="{{ url('/admin/categories/') }}">View Category</a>
                 </nav>
             </div>
 
@@ -30,8 +30,8 @@
             <div class="collapse" id="collapseProductsRecommended" aria-labelledby="headingOne"
                 data-bs-parent="#sidenavAccordion">
                 <nav class="sb-sidenav-menu-nested nav">
-                    <a class="nav-link" href="{{ url('/admin/products-create') }}">Create Recommended Products</a>
-                    <a class="nav-link" href="{{ url('/admin/view-products') }}">View Recommended Product</a>
+                    <a class="nav-link" href="{{ url('/admin/recommended/create') }}">Create Recommended Products</a>
+                    <a class="nav-link" href="{{ url('/admin/recommended/') }}">View Recommended Product</a>
                 </nav>
             </div>
 
@@ -45,8 +45,8 @@
             <div class="collapse" id="collapseProductsSingle" aria-labelledby="headingOne"
                 data-bs-parent="#sidenavAccordion">
                 <nav class="sb-sidenav-menu-nested nav">
-                    <a class="nav-link" href="{{ url('/admin/single-product-create') }}">Create Single Item Product</a>
-                    <a class="nav-link" href="{{ url('/admin/view-single-product') }}">View Single Item Product</a>
+                    <a class="nav-link" href="{{ url('/admin/single-products/create') }}">Create Single Item Product</a>
+                    <a class="nav-link" href="{{ url('/admin/single-products/') }}">View Single Item Product</a>
                 </nav>
             </div>
 
