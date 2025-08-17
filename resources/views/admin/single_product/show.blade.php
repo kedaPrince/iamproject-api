@@ -127,26 +127,37 @@ $statusLabel = ((int)$singleProduct->is_active === 1) ? ['text'=>'Active','class
                                 <td class="metadata-label">Stock</td>
                                 <td>{{ $singleProduct->stock }}</td>
                             </tr>
+                            <h5>Additional Info</h5>
+                            <tr>
+                                <td class="metadata-label">
+                                    <h5>Description</h5>
+                                </td>
+                                <td>
+                                    <p class="mb-3">{{ $singleProduct->description ?? 'No description provided.' }}</p>
+                                </td>
+                            </tr>
                         </tbody>
                     </table>
                 </div>
 
                 <hr>
 
-                <div>
-                    <h5>Description</h5>
-                    <p class="mb-3">{{ $singleProduct->description ?? 'No description provided.' }}</p>
-                </div>
+                <table>
+                    <tbody>
 
-                <div>
-                    <h5>Additional Info</h5>
-                    <ul class="list-unstyled">
-                        <li><strong>UUID:</strong> {{ (string) $singleProduct->uuid }}</li>
-                        <li><strong>Category ID:</strong> {{ $singleProduct->category_id }}</li>
-                        <li><strong>Status:</strong> {{ (int)$singleProduct->is_active === 1 ? 'Active' : 'Inactive' }}
-                        </li>
-                    </ul>
-                </div>
+
+                        <div>
+
+                            <ul class="list-unstyled">
+                                <li><strong>UUID:</strong> {{ (string) $singleProduct->uuid }}</li>
+                                <li><strong>Category ID:</strong> {{ $singleProduct->category_id }}</li>
+                                <li><strong>Status:</strong>
+                                    {{ (int)$singleProduct->is_active === 1 ? 'Active' : 'Inactive' }}
+                                </li>
+                            </ul>
+                        </div>
+                    </tbody>
+                </table>
             </div>
 
             <!-- RIGHT: image / actions -->
