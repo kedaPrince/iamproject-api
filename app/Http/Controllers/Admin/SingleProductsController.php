@@ -11,6 +11,7 @@ use App\Http\Requests\SingleProductFormRequest;
 
 class SingleProductsController extends Controller
 {
+<<<<<<< Updated upstream
     public function index()
     {
         // Fetch all products with their category
@@ -123,5 +124,13 @@ public function store(SingleProductFormRequest $request)
     public function show(SingleProducts $singleProduct)
     {
         return view('admin.single_product.show', compact('singleProduct'));
+=======
+    public function index(){
+        return view('admin.single_product.index');
+    }
+
+    public function create(){
+        return view('admin.single_product.create');
+>>>>>>> Stashed changes
     }
 }
