@@ -46,11 +46,7 @@
                 data-bs-parent="#sidenavAccordion">
                 <nav class="sb-sidenav-menu-nested nav">
                     <a class="nav-link" href="{{ url('/admin/single-products/create') }}">Create Single Item Product</a>
-<<<<<<< Updated upstream
                     <a class="nav-link" href="{{ url('/admin/single-products/') }}">View Single Item Product</a>
-=======
-                    <a class="nav-link" href="{{ url('/admin/view-single-products') }}">View Single Item Product</a>
->>>>>>> Stashed changes
                 </nav>
             </div>
 
