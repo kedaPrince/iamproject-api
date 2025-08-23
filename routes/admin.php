@@ -3,10 +3,10 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Admin\OrdersController;
 use App\Http\Controllers\Admin\CategoryController;
-use App\Http\Controllers\Admin\DeliveriesController;
 use App\Http\Controllers\Admin\DashboardController;
-use App\Http\Controllers\Admin\RecommendedProducts;
+use App\Http\Controllers\Admin\DeliveriesController;
 use App\Http\Controllers\Admin\SingleProductsController;
+use App\Http\Controllers\Admin\RecommendedProductsController;
 
 //use App\Http\Controllers\Admin\ProductController;
 //use App\Http\Controllers\Admin\UserController;
@@ -23,7 +23,8 @@ Route::prefix('admin/')->middleware(['auth', 'isAdmin'])->group(function () {
     Route::resource('deliveries', DeliveriesController::class);
 
     // Recommended
-    Route::resource('recommended', RecommendedProducts::class);
+    Route::resource('recommended', RecommendedProductsController::class);
+
 
     // Orders
     Route::resource('orders', OrdersController::class);

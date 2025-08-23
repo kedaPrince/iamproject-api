@@ -30,6 +30,7 @@ return new class extends Migration
             $table->text('description')->nullable();
             $table->integer('quantity')->default(1); // quantity for that item
             $table->decimal('estimated_price', 10, 2)->nullable();
+            $table->string('image')->nullable(); // ✅ image column
             $table->boolean('is_active')->default(true);
 
             // Metadata

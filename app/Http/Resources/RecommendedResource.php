@@ -5,7 +5,7 @@ namespace App\Http\Resources;
 use Illuminate\Http\Request;
 use Illuminate\Http\Resources\Json\JsonResource;
 
-class SingleProductsResource extends JsonResource
+class RecommendedResource extends JsonResource
 {
     /**
      * Transform the resource into an array.
@@ -16,15 +16,19 @@ class SingleProductsResource extends JsonResource
     {
         return [
             'id' => $this->id,
-            'uuid' => $this->uuid,
             'name' => $this->name,
-            'slug' => $this->slug,
             'description' => $this->description,
-            'price' => $this->price,
-            'stock' => $this->stock,
-            'image' => $this->image,
+            'quantity' => $this->quantity,
+            'estimated_price' => $this->estimated_price,
+            'image' => $this->image ? asset($this->image) : null, // full URL if set
             'is_active' => $this->is_active,
             'category' => $this->category ? $this->category->name : null,
+            'product' => $this->product ? [
+                'id' => $this->product->id,
+                'name' => $this->product->name,
+                'price' => $this->product->price,
+                'stock' => $this->product->stock,
+            ] : null,
             'created_at' => $this->created_at,
             'updated_at' => $this->updated_at,
         ];

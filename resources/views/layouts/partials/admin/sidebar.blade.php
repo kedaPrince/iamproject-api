@@ -2,21 +2,22 @@
     <div class="sb-sidenav-menu">
         <div class="nav">
             <div class="sb-sidenav-menu-heading">Core</div>
-            <a class="nav-link" href="{{url('/admin/dashboard')}}">
+            <a class="nav-link" href="{{ route('admin.dashboard') }}">
                 <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
                 Dashboard
             </a>
+
             <div class="sb-sidenav-menu-heading">Interface</div>
-            <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapeCategory"
-                aria-expanded="false" aria-controls="collapeCategory">
+            <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapseCategory"
+                aria-expanded="false" aria-controls="collapseCategory">
                 <div class="sb-nav-link-icon"><i class="fas fa-columns"></i></div>
                 Category
                 <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
             </a>
-            <div class="collapse" id="collapeCategory" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
+            <div class="collapse" id="collapseCategory" data-bs-parent="#sidenavAccordion">
                 <nav class="sb-sidenav-menu-nested nav">
-                    <a class="nav-link" href="{{ url('/admin/categories/create') }}">Create Category</a>
-                    <a class="nav-link" href="{{ url('/admin/categories/') }}">View Category</a>
+                    <a class="nav-link" href="{{ route('categories.create') }}">Create Category</a>
+                    <a class="nav-link" href="{{ route('categories.index') }}">View Category</a>
                 </nav>
             </div>
 
@@ -27,11 +28,10 @@
                 Family Packages
                 <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
             </a>
-            <div class="collapse" id="collapseProductsRecommended" aria-labelledby="headingOne"
-                data-bs-parent="#sidenavAccordion">
+            <div class="collapse" id="collapseProductsRecommended" data-bs-parent="#sidenavAccordion">
                 <nav class="sb-sidenav-menu-nested nav">
-                    <a class="nav-link" href="{{ url('/admin/recommended/create') }}">Create Recommended Products</a>
-                    <a class="nav-link" href="{{ url('/admin/recommended/') }}">View Recommended Product</a>
+                    <a class="nav-link" href="{{ route('recommended.create') }}">Create Recommended Product</a>
+                    <a class="nav-link" href="{{ route('recommended.index') }}">View Recommended Products</a>
                 </nav>
             </div>
 
@@ -42,20 +42,19 @@
                 Single Item Groceries
                 <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
             </a>
-            <div class="collapse" id="collapseProductsSingle" aria-labelledby="headingOne"
-                data-bs-parent="#sidenavAccordion">
+            <div class="collapse" id="collapseProductsSingle" data-bs-parent="#sidenavAccordion">
                 <nav class="sb-sidenav-menu-nested nav">
-                    <a class="nav-link" href="{{ url('/admin/single-products/create') }}">Create Single Item Product</a>
-                    <a class="nav-link" href="{{ url('/admin/single-products/') }}">View Single Item Product</a>
+                    <a class="nav-link" href="{{ route('single-products.create') }}">Create Single Item Product</a>
+                    <a class="nav-link" href="{{ route('single-products.index') }}">View Single Item Product</a>
                 </nav>
             </div>
 
             <div class="sb-sidenav-menu-heading">Track Orders</div>
-            <a class="nav-link" href="{{url('/admin/deliveries')}}">
+            <a class="nav-link" href="{{ route('deliveries.index') }}">
                 <div class="sb-nav-link-icon"><i class="fas fa-chart-area"></i></div>
                 Delivered
             </a>
-            <a class="nav-link" href="{{url('/admin/orders')}}">
+            <a class="nav-link" href="{{ route('orders.index') }}">
                 <div class="sb-nav-link-icon"><i class="fas fa-table"></i></div>
                 Orders
             </a>
@@ -64,4 +63,6 @@
                 <div class="small">Logged in as:</div>
                 Start Bootstrap
             </div>
+        </div>
+    </div>
 </nav>
